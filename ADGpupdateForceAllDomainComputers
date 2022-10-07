@@ -1,0 +1,1 @@
+Get-ADComputer -Filter * -SearchBase "OU=Computers,DC=consonto" | Foreach-Object {Invoke-GPUpdate -Computer $_.name -Force -RandomDelayInMinutes 0}
